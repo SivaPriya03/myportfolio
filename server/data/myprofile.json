@@ -1,0 +1,64 @@
+{
+    "name": "Siva Priya",
+    "avatar": "SP",
+    "image": "https://www.shethepeople.tv/wp-content/uploads/2020/06/clinton-naik-k-YuHdAtTP0-unsplash-e1593171124178.jpg",
+    "role": "Frontend Web Developer",
+    "quote": {
+        "text":"Imagination is everything",
+        "author": "Albert Einstein"
+    },
+    "about": {
+        "content": "Frontend Web developer with 3+ years of professional experience in building enterprise level web applications using React,Redux and webpack."
+    },
+    "skills": [
+        {
+            "image": "https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png",
+            "text": "JavaScript",
+            "type": "image"
+        },
+        {
+            "iconClass": "uil uil-html5",
+            "text": "HTML5",
+            "type": "icon"
+        },
+        {
+            "type": "text",
+            "text": "Java"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Project Title",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eaque cum tempora mollitia corrupti commodi nostrum incidunt modi suscipit quia soluta recusandae placeat, nam autem doloremque, ipsam fugit at tempore.",
+            "srcURL": "https://www.google.com",
+            "image": "https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png"
+        }
+    ],
+    "media": [
+        {
+            "iconClass": "uil uil-linkedin",
+            "url": "https://www.linkedin.com",
+            "text": "Linkedin"
+        },
+        {
+            "iconClass": "uil uil-blogger",
+            "url": "https://www.linkedin.com",
+            "text": "Hashnode"
+        },
+        {
+            "iconClass": "uil uil-twitter",
+            "url": "https://www.linkedin.com",
+            "text": "Twitter"
+        },
+        {
+            "iconClass": "uil uil-github",
+            "url": "https://www.linkedin.com",
+            "text": "Twitter"
+        },
+        {
+            "iconClass": "uil uil-envelope",
+            "url": "https://www.linkedin.com",
+            "text": "Gmail"
+        }
+    ]
+}
