@@ -58,7 +58,7 @@ export default function (data) {
             </div>
             <div class="intro-subtitle"> ${role}</div>
             <div class="contact-button">
-                <button id="contact" class="button">
+                <button id="contact-btn" class="button">
                     Contact
                 </button>
             </div>

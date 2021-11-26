@@ -9,8 +9,10 @@ const rootElement = document.getElementById('root');
 const showData = () => {
   getPortFolioData()
     .then((data) => {
+      const { name, role } = data;
       const htmlStr = generateHTMLStr(data);
       rootElement.innerHTML = htmlStr;
+      document.title = `${name}-${role}`;
       enableScrollAnimation();
       handleAnimation();
     })

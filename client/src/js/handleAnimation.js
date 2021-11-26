@@ -2,9 +2,9 @@ import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
 
 export default function () {
+  /* Hamburger Changes */
   const hamburger = document.querySelector('.hamburger-item');
   const navMenu = document.querySelector('.menu');
-  const closeIcon = document.querySelector('close-icon');
 
   hamburger.addEventListener('click', mobileMenu);
 
@@ -21,6 +21,8 @@ export default function () {
     navMenu.classList.remove('active');
   }
 
+  /* Tooltip changes */
+
   function onMouseOver(event) {
     const TITLE_ATTRIBUTE = 'title';
     const eventTarget = event.target;
@@ -33,6 +35,14 @@ export default function () {
       });
     }
   }
-
   document.addEventListener('mouseover', onMouseOver);
+
+  /* Others */
+  const contactButton = document.getElementById('contact-btn');
+  contactButton.addEventListener('click', () => {
+    const contactSection = document.getElementById('contact');
+    contactSection.scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
 }
