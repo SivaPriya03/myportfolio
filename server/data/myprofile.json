@@ -1,7 +1,7 @@
 {
     "name": "Siva Priya",
     "avatar": "SP",
-    "image": "https://www.shethepeople.tv/wp-content/uploads/2020/06/clinton-naik-k-YuHdAtTP0-unsplash-e1593171124178.jpg",
+    "image": "/assets/profile.jpg",
     "role": "Frontend Web Developer",
     "quote": {
         "text":"Imagination is everything",
@@ -12,52 +12,84 @@
     },
     "skills": [
         {
-            "image": "https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png",
+            "image": "/assets/javascript.png",
             "text": "JavaScript",
             "type": "image"
         },
         {
-            "iconClass": "uil uil-html5",
-            "text": "HTML5",
-            "type": "icon"
+            "image": "/assets/reactjs.jpg",
+            "text": "ReactJS",
+            "type": "image"
         },
         {
-            "type": "text",
-            "text": "Java"
+            "image": "/assets/webpack.jpg",
+            "text": "Webpack",
+            "type": "image"
+        },
+        {
+            "image": "/assets/dsandalgo.png",
+            "text": "Data Structures and Algorithms",
+            "type": "image"
+        },
+        {
+            "image": "/assets/java.png",
+            "text": "Java",
+            "type": "image"
+        },
+        {
+            "image": "/assets/nodejs.svg",
+            "text": "NodeJS",
+            "type": "image"
+        },
+        {
+            "image": "/assets/html5.jpg",
+            "text": "HTML5",
+            "type": "image"
+        },
+        {
+            "image": "/assets/css3.png",
+            "text": "CSS3",
+            "type": "image"
         }
     ],
     "projects": [
         {
-            "title": "Project Title",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eaque cum tempora mollitia corrupti commodi nostrum incidunt modi suscipit quia soluta recusandae placeat, nam autem doloremque, ipsam fugit at tempore.",
-            "srcURL": "https://www.google.com",
-            "image": "https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png"
+            "title": "Your Codepen",
+            "description": "your-codepen lets you to run a simple web app developed on your local machine using your favourite IDE with features like live reloading",
+            "srcURL": "https://github.com/SivaPriya03/your-codepen",
+            "image": "/assets/emptyproject.svg"
+        },
+        {
+            "title": "Nutricbot",
+            "description": "A facebook bot that provides customised diet plan based on users preference and their location. It also predicts calories based on the image input provided by the user",
+            "srcURL": "",
+            "image": "/assets/emptyproject.svg"
         }
     ],
     "media": [
         {
             "iconClass": "uil uil-linkedin",
-            "url": "https://www.linkedin.com",
+            "url": "https://www.linkedin.com/in/sivapriya1700/",
             "text": "Linkedin"
         },
         {
             "iconClass": "uil uil-blogger",
-            "url": "https://www.linkedin.com",
+            "url": "https://thepurplecoder.hashnode.dev/",
             "text": "Hashnode"
         },
         {
             "iconClass": "uil uil-twitter",
-            "url": "https://www.linkedin.com",
+            "url": "https://twitter.com/thepurplecoder",
             "text": "Twitter"
         },
         {
             "iconClass": "uil uil-github",
-            "url": "https://www.linkedin.com",
-            "text": "Twitter"
+            "url": "https://github.com/SivaPriya03",
+            "text": "Github"
         },
         {
             "iconClass": "uil uil-envelope",
-            "url": "https://www.linkedin.com",
+            "url": "mailto:sivapriya1700@gmail.com",
             "text": "Gmail"
         }
     ]

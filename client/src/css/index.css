@@ -273,6 +273,9 @@ li {
 .grid-tile:hover {
   box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.15);
 }
+.project-grid-tile:hover {
+  color: var(--primary-font-color);
+}
 .grid-tile-image,
 .grid-tile > * {
   height: 100%;
@@ -298,6 +301,7 @@ a:hover {
 
 .project-subtitle {
   font-size: 12px;
+  height: 10em;
 }
 .project-header {
   font-size: 18px;
@@ -393,6 +397,9 @@ footer {
 
 .footer-social-link-item:hover {
   transform: translateY(-5px);
+}
+.tooltip {
+  color: #f9f9f9;
 }
 
 @media screen and (max-width: 1000px) {

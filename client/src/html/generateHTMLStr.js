@@ -53,7 +53,7 @@ export default function (data) {
         </div> 
         <div class="intro-content">
             <div class="intro-title">
-                <span class="intro-title-hello"> Hi,👋 I am  </span>
+                <span class="intro-title-hello"> Hello, I am  </span>
                 <span class="intro-title-name"> ${name} </span>
             </div>
             <div class="intro-subtitle"> ${role}</div>
@@ -86,18 +86,15 @@ export default function (data) {
                   const { type, text } = currentSkillVal;
                   let children = '';
                   if (type === 'image') {
-                    children = `<div class="img" title="${text}"><img class="grid-tile-image" src="${currentSkillVal.image}" alt="JS"></div>`;
+                    children = `<div class="img"><img class="grid-tile-image" src="${currentSkillVal.image}" alt="${text}"></div>`;
                   }
                   if (type === 'icon') {
-                    children = `<div class="grid-tile-icon" title="${text}"><i class="${currentSkillVal.iconClass}"></i></div>`;
+                    children = `<div class="grid-tile-icon"><i class="${currentSkillVal.iconClass}"></i></div>`;
                   }
                   if (type === 'text') {
-                    children = `<div class="grid-tile-text" title="${text}"><span>${text.slice(
-                      0,
-                      2
-                    )}</span></div>`;
+                    children = `<div class="grid-tile-text"><span>${text}</span></div>`;
                   }
-                  const skillElement = `<div class="grid-tile grid"> ${children}</div>`;
+                  const skillElement = `<div class="grid-tile grid"  title="${text}"> ${children}</div>`;
                   return prevSkillVal + skillElement;
                 }, '')}
             </div>
@@ -113,8 +110,8 @@ export default function (data) {
               const { title, description, srcURL, image } = currentProject;
               const projectElement = `
                 <a href="${srcURL}" target="_blank">
-                <div class="grid project-grid-tile">
-                    <div class="img" title="${title}"><img class="grid-tile-image" src="${image}" alt="${title}"></div>
+                <div class="grid project-grid-tile" title="${title}">
+                    <div class="img"><img class="grid-tile-image" src="${image}" alt="${title}"></div>
                     <div class="project-intro">
                         <div class="project-header">
                             <div class="caption"> ${title} </div>
@@ -136,7 +133,7 @@ export default function (data) {
     <section class="contact" id='contact'>
         <div class="center">
             <header class="about-title">
-                <h2> Contact me </h2>
+                <h2> Contact </h2>
             </header>
             <div class="contact-content">
                 <div class="contact-form">

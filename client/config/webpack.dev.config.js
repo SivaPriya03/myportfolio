@@ -1,6 +1,7 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.config');
 const path = require('path');
+const serverURL = 'http://localhost:3000';
 
 module.exports = merge(common, {
   mode: 'development',
@@ -12,7 +13,8 @@ module.exports = merge(common, {
   devServer: {
     static: './dist',
     proxy: {
-      '/api/mydata': 'http://localhost:3000',
+      '/api/mydata': serverURL,
+      '/assets/*': serverURL,
     },
   },
 });

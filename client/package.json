@@ -23,6 +23,7 @@
     "webpack-server": "^0.1.2"
   },
   "dependencies": {
-    "scrollreveal": "^4.0.9"
+    "scrollreveal": "^4.0.9",
+    "tippy.js": "^6.3.7"
   }
 }

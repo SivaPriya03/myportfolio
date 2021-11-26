@@ -5,7 +5,6 @@ export const getPortFolioData = () => {
 export const loadCssResource = (href, onSuccess) => {
   let link = document.createElement('link');
   link.href = href;
-  link.type = 'text/css';
   link.rel = 'stylesheet';
   link.onload = onSuccess;
   document.getElementsByTagName('head')[0].appendChild(link);
