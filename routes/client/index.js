@@ -4,7 +4,7 @@ const { getCWD } = require('../../utils');
 
 const configureClientPath = (app) => {
   const rootPath = getCWD();
-  const clientFolder = path.resolve(rootPath, '../client');
+  const clientFolder = path.resolve(rootPath, './client');
   app.get('/', (req, rootResponse) => {
     const sendProductionHTML = () => {
       rootResponse.sendFile(clientFolder + '/dist/index.html');
