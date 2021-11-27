@@ -25,10 +25,11 @@ const getMyBlogs = (done) => {
               posts.map((post) => {
                 return {
                   url: post.url,
-                  publishedDate: new Date(post.published_at).toDateString(),
-                  cover_image: post.cover_image,
+                  publishedTime: post.published_at,
+                  image: post.cover_image,
                   title: post.title,
                   summary: post.description,
+                  readingTime: post.reading_time_minutes,
                 };
               }),
               null

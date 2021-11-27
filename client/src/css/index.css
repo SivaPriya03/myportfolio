@@ -310,26 +310,48 @@ a {
   text-decoration: none;
   color: inherit;
 }
-a:hover {
+li a:hover {
   color: var(--secondary-font-color);
 }
 .project-grid-tile {
   padding: 1em;
 }
-.project-subtitle {
+.section-grid-subtitle {
   font-size: 12px;
-  height: 10em;
 }
-.project-header {
+.project-grid-tile .section-grid-subtitle {
+  height: 12em;
+}
+.section-grid-intro {
+  display: flex;
+  flex-direction: column;
+}
+.blog-grid-tile .section-grid-intro .section-grid-header {
+}
+.section-grid-header {
   font-size: 18px;
   padding: 1em;
   display: flex;
 }
+.subtitle-date {
+  margin-top: 1em;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
 .project-grid-tile:hover {
   background-color: var(--grid-bg-highlight);
 }
-.project-header .caption {
+.section-grid-header .caption {
   margin-right: 8px;
+}
+.blog-grid {
+  --fill-item-size: 30rem;
+  padding: 1em;
+}
+.blog-grid-tile {
+  margin-bottom: 2em;
+  height: 350px;
 }
 input,
 textarea {

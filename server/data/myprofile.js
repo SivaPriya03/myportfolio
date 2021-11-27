@@ -2,6 +2,7 @@ module.exports = {
   name: 'Siva Priya',
   avatar: 'SP',
   image: '/assets/profile.jpg',
+  resumeURL: '/assets/Siva Priya.pdf',
   role: 'Frontend Web Developer',
   quote: {
     text: 'Imagination is everything',

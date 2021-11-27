@@ -9,6 +9,8 @@ export default function (data) {
     skills = [],
     projects = [],
     media,
+    blogs = [],
+    resumeURL,
   } = data;
   return `<header>
     <nav class="navbar">
@@ -33,7 +35,7 @@ export default function (data) {
                     </a>
                 </li>
                 <li>
-                    <a href="#resume" class="nav-link">
+                    <a href="${resumeURL}" class="nav-link" download="${name}">
                         Resume
                     </a>
                 </li>
@@ -66,7 +68,7 @@ export default function (data) {
     </section>
     <section class="about-me" id="about">
         <div class="center">
-            <header class="about-title">
+            <header class="section-title">
                 <h2> About Me </h2>
             </header>
             <div class="about-content">
@@ -78,7 +80,7 @@ export default function (data) {
     </section>
     <section class="skills" id="skills">
         <div class="center">
-            <header class="about-title">
+            <header class="section-title">
                 <h2> Skills </h2>
             </header>
             <div class="grid-tile-parent">
@@ -102,7 +104,7 @@ export default function (data) {
     </section>
     <section class="projects" id="projects">
         <div class="center">
-            <header class="about-title">
+            <header class="section-title">
                 <h2> Projects </h2>
             </header>
             <div class="grid-tile-parent">
@@ -112,12 +114,12 @@ export default function (data) {
                 <a href="${srcURL}" target="_blank">
                 <div class="grid project-grid-tile" title="${title}">
                     <div class="img"><img class="grid-tile-image" src="${image}" alt="${title}"></div>
-                    <div class="project-intro">
-                        <div class="project-header">
+                    <div class="section-grid-intro">
+                        <div class="section-grid-header">
                             <div class="caption"> ${title} </div>
                         </div>
-                        <div class="project-subtitle">
-                            <p class="project-explanation">
+                        <div class="section-grid-subtitle">
+                            <p class="section-grid-explanation">
                                 ${description}
                             </p>
                         </div>
@@ -130,9 +132,59 @@ export default function (data) {
             </div>
         </div>
     </section>
+    <section class="blogs" id="blogs">
+            <div class="center">
+                <header class="section-title">
+                    <h2> Blogs </h2>
+                </header>
+                <div class="grid-tile-parent blog-grid">
+                    ${blogs.reduce((prevBlogEle, blog) => {
+                      const {
+                        readingTime,
+                        publishedTime,
+                        image,
+                        summary,
+                        title,
+                        url,
+                      } = blog;
+                      const publishedDate = new Date(
+                        publishedTime
+                      ).toDateString();
+                      const currentBlogEle = `
+                        <a href="${url}" target="_blank" title="${title}">
+                        <div class="grid blog-grid-tile">
+                            <div class="img"><img class="grid-tile-image" src="${image}" alt="your-codepen"></div>
+                            <div class="section-grid-intro">
+                                <div class="section-grid-header">
+                                    <div class="caption"> ${title} </div>
+                                </div>
+                                <div class="section-grid-subtitle">
+                                    <p class="section-grid-explanation">
+                                        ${summary}
+                                    </p>
+                                    <div class="subtitle-date" >
+                                        <span title="${`Published on ${publishedDate}`}">
+                                            <i class="uil uil-book-open"></i>
+                                            ${publishedDate}
+                                        </span>
+                                        <span title="${`Read time: ${readingTime} min`}">
+                                            <i class="uil uil-clock"></i>
+                                            ${readingTime} min
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                        `;
+                      return prevBlogEle + currentBlogEle;
+                    }, '')}
+                </div>
+            </div>
+        </section>
     <section class="contact" id='contact'>
         <div class="center">
-            <header class="about-title">
+            <header class="section-title">
                 <h2> Contact </h2>
             </header>
             <div class="contact-content">
