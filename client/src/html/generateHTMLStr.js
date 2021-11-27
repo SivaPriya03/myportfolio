@@ -137,7 +137,7 @@ export default function (data) {
                 <header class="section-title">
                     <h2> Blogs </h2>
                 </header>
-                <div class="grid-tile-parent blog-grid">
+                <div class="blog-grid">
                     ${blogs.reduce((prevBlogEle, blog) => {
                       const {
                         readingTime,
@@ -188,25 +188,25 @@ export default function (data) {
                 <h2> Contact </h2>
             </header>
             <div class="contact-content">
-                <div class="contact-form">
-                    <div class="field field-text">
+                    <div class="contact-form" action="/api/contact" method="POST">
+                        <div class="field field-text">
                         <label for='name'> Name</label>
-                        <input type="text" placeholder='Enter your name' id='name' name='name'/>
+                        <input type="text" required placeholder='Enter your name' id='name' name='name'/>
+                        </div>
+                        <div class="field field-text">
+                            <label for='email'> Email</label>
+                            <input type="email" required placeholder='Enter your email' id='email'/>
+                        </div>
+                        <div class="field field-long">
+                            <label for='message'> Message </label>
+                            <textarea name="message" required placeholder='Type your message' id="message"></textarea>
+                        </div>
+                        <div class="send-button">
+                            <button class='button' id="send" type='submit'>
+                                Send
+                            </button>
+                        </div>
                     </div>
-                    <div class="field field-text">
-                        <label for='name'> Email</label>
-                        <input type="email" placeholder='Enter your email' id='email'/>
-                    </div>
-                    <div class="field field-long">
-                        <label for='name'> Message </label>
-                        <textarea name="message" placeholder='Type your message' id="message"></textarea>
-                    </div>
-                    <div class="send-button">
-                        <button class='button' id="send">
-                            Send
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

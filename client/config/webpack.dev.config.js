@@ -13,7 +13,7 @@ module.exports = merge(common, {
   devServer: {
     static: './dist',
     proxy: {
-      '/api/mydata': serverURL,
+      '/api/*': serverURL,
       '/assets/*': serverURL,
     },
   },

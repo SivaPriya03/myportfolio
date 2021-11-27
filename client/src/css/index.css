@@ -326,7 +326,11 @@ li a:hover {
   display: flex;
   flex-direction: column;
 }
-.blog-grid-tile .section-grid-intro .section-grid-header {
+.blog-grid {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 1em;
 }
 .section-grid-header {
   font-size: 18px;
@@ -351,7 +355,6 @@ li a:hover {
 }
 .blog-grid-tile {
   margin-bottom: 2em;
-  height: 350px;
 }
 input,
 textarea {

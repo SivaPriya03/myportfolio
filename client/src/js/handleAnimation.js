@@ -1,5 +1,6 @@
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
+import { postContactFormData } from './postData';
 
 export default function () {
   /* Hamburger Changes */
@@ -45,4 +46,47 @@ export default function () {
       behavior: 'smooth',
     });
   });
+
+  function getInputElements() {
+    const emailEle = document.getElementById('email');
+    const nameEle = document.getElementById('name');
+    const messageEle = document.getElementById('message');
+    return { emailEle, nameEle, messageEle };
+  }
+
+  function getInputValues() {
+    const { emailEle, nameEle, messageEle } = getInputElements();
+    const isValid = [emailEle, nameEle, messageEle].every((element) => {
+      if (typeof element.checkValidity === 'undefined') {
+        return true;
+      }
+      return element.checkValidity();
+    });
+    return isValid
+      ? {
+          name: nameEle.value,
+          message: messageEle.value,
+          email: emailEle.value,
+        }
+      : {};
+  }
+
+  function onSend() {
+    const { name, email, message } = getInputValues();
+    if (name) {
+      sendButton.innerHTML = 'Sending...';
+      postContactFormData({ name, email, message }).then(() => {
+        sendButton.innerHTML = 'Send';
+        const { emailEle, nameEle, messageEle } = getInputElements();
+        [emailEle, nameEle, messageEle].forEach((element) => {
+          element.value = '';
+        });
+      });
+    } else {
+      alert('Fill the required fields properly');
+    }
+  }
+
+  const sendButton = document.getElementById('send');
+  sendButton.addEventListener('click', onSend);
 }
