@@ -96,5 +96,10 @@ module.exports = {
       url: 'mailto:sivapriya1700@gmail.com',
       text: 'Gmail',
     },
+    {
+      iconClass: 'uil uil-arrow',
+      url: 'https://stackoverflow.com/users/8601185/anonymous-siva',
+      text: 'Stack Overflow',
+    },
   ],
 };
