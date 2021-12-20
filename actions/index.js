@@ -8,6 +8,7 @@ const getMyBlogs = (done) => {
       {
         headers: {
           'api-key': DEV_TO_API_KEY,
+          'User-Agent': 'Node HTTPS',
         },
       },
       (response) => {
