@@ -3,14 +3,14 @@ module.exports = {
   avatar: 'SP',
   image: '/assets/profile.jpg',
   resumeURL: '/assets/Siva Priya.pdf',
-  role: 'Frontend Web Developer',
+  role: 'Fullstack Developer',
   quote: {
     text: 'Imagination is everything',
     author: 'Albert Einstein',
   },
   about: {
     content:
-      'Frontend Web developer with 3+ years of professional experience in building enterprise level web applications using React,Redux and webpack.',
+      'Fullstack developer with 3+ years of professional experience in building enterprise level web applications with React,Redux and webpack as frontend and Java as backend',
   },
   skills: [
     {
