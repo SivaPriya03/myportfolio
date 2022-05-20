@@ -10,7 +10,7 @@ module.exports = {
   },
   about: {
     content:
-      'Fullstack developer with 3+ years of professional experience in building enterprise level web applications with React,Redux and webpack as frontend and Java as backend',
+      'Fullstack developer with 4 years of professional experience in building enterprise level web applications with React,Redux and webpack as frontend and Java as backend',
   },
   skills: [
     {
